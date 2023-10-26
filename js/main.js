@@ -139,7 +139,7 @@ saludar();
 
 alert("En nuestra tienda ofrecemos dos categorias de productos: Jewelery y Women's clothing.");
 
-alert("En la siguiente ventana aparecerán nuestros productos. Si querés alguno en especial, escribí el nombre exacto del mismo.");
+alert("En la siguiente ventana aparecerán nuestros productos. Si querés alguno en especial, escribí el nombre EXACTO del mismo con mayúsculas y minúsculas.");
 
 console.log (products.sort(( a , b ) => {
     if ( a.title < b.title ) {
@@ -147,7 +147,7 @@ console.log (products.sort(( a , b ) => {
     } else if ( a.title > b.title ) {
         return 1
     } else {
-    return 0
+        return 0
     }
 }));
 
@@ -158,7 +158,7 @@ let eleccionProducto = prompt("¿Qué producto querés comprar?\n" + nombres);
 const productoElegido = products.find (nombre => nombre.title === eleccionProducto); 
 
 if (productoElegido == undefined) {
-        alert("Muchas gracias por su visita")
+        alert("Producto no encontrado.\nMuchas gracias por su visita")
     } else {
     let confirmarCompra = confirm(`Producto:\nNombre: ${productoElegido.title} \nDescripción: ${productoElegido.description}\nPrecio: $${productoElegido.price} \n¿Estás seguro que deseas realizar la compra?`)
     if (confirmarCompra) {
@@ -168,5 +168,4 @@ if (productoElegido == undefined) {
     } else {
         alert("Gracias por tu visita");
     }
-}
-
+}   
